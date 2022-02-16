@@ -5,13 +5,13 @@ import java.util.Comparator;
 public class ComparePlayers implements Comparator<Player>{
 
     @Override
-    public int compare(Player a1, Player a2) {
-        if (a1.score < a2.score) {
+    public int compare(Player p1, Player p2) {
+        if (p1.score < p2.score) {
             return 1;
-        } else if (a1.score > a2.score) {
+        } else if (p1.score > p2.score) {
             return -1;
         } else {
-            return a1.name.compareTo(a2.name);
+            return p1.name.compareTo(p2.name);
         }
     }
 
