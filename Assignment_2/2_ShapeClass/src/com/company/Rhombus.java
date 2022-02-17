@@ -17,6 +17,7 @@ public class Rhombus extends Shape{
         this.name = name;
         this.color = color;
         this.diagonal1 = diagonal1;
+        this.diagonal2 = diagonal1;
     }
 
     public float getDiagonal1() {
