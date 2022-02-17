@@ -1,52 +1,42 @@
 package com.company;
 
-public class Triangle extends Shape {
-    int base, height, side;
+public class Triangle extends Shape{
+    float side, base, height;
 
-    public Triangle triangle(int base, int height){
-        name = "Triangle";
-        this.base=base;
-        this.height=height;
-    }
-
-    public Triangle triangle(int side){
-        this.side=side;
-    }
-
-    public int getBase() {
-        return base;
-    }
-
-    public void setBase(int base) {
+    public Triangle(String name, String color, float base, float height) {
+        super(name, color);
+        this.name = name;
+        this.color = color;
         this.base = base;
-    }
-
-    public int getHeight() {
-        return height;
-    }
-
-    public void setHeight(int height) {
         this.height = height;
     }
 
-    public int getSide() {
+    public Triangle(String name, String color, float side) {
+        super(name, color);
+        this.name = name;
+        this.color = color;
+        this.side = side;
+    }
+
+    public float getSide() {
         return side;
     }
 
-    public void setSide(int side) {
+    public void setSide(float side) {
         this.side = side;
     }
 
     @Override
-    public double getArea() {
-        area = 0.5 * getBase();
-        return super.getArea();
+    public void getPerimeter() {
+        perimeter = side * 3 ;
+        System.out.println("Perimeter = " + perimeter);
     }
 
     @Override
-    public double getPerimeter() {
-
-        return super.getPerimeter();
+    public void getArea(){
+        area = 0.5f * base * height;
+        System.out.println("Area = " + area);
     }
+
 }
 
