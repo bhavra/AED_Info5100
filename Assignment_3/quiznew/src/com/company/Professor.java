@@ -9,6 +9,6 @@ public class Professor extends Person{
 
 
     public void giveQuiz(){
-        System.out.println("Professor - " + this.getName() + "takes quiz" );
+        System.out.println("Professor - " + this.getName() + "  gives the quiz" );
     }
 }
