@@ -18,16 +18,16 @@ public class Camera {
     private String cameraName = "";
 
     public static Camera getInstance(){
+
         if(_instance == null){
             synchronized (obj){
+                //for double locking we can check the instance twice
                 if(_instance == null){
                     _instance = new Camera();
-                }
+               }
+
             }
         }
-
         return _instance;
     }
-
-
 }
