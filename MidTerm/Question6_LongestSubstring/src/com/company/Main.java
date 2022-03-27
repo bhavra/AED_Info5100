@@ -1,43 +1,29 @@
 package com.company;
+import java.util.*;
 
 public class Main {
 
-    public static void main(String[] args) {
-    String str = "abcaaa";
-    s
-    }
+    public static void main(String args[]) {
 
-        public int lengthOfLongestSubstring(String str) {
-            int n = str.length();
-
-            int res = 0;
-            for (int i = 0; i < n; i++) {
-                for (int j = i; j < n; j++) {
-                    if (checkRepetition(str, i, j)) {
-                        res = Math.max(res, j - i + 1);
+                Scanner sc = new Scanner(System.in);
+                System.out.println("Enter String : ");
+                String word = sc.next(), maxWord = "", newWord = "";
+                int l = word.length(), i, j, max = 0;
+                for (i = 0; i < l; i++) {
+                    newWord = word.substring(i);
+                    for (j = i + 1; j < l; j++)
+                        if (newWord.indexOf(word.charAt(j)) + i != j)
+                            break;
+                    if (j - i > max) {
+                        max = j - i;
+                        maxWord = word.substring(i, j);
                     }
                 }
-            }
-
-            return res;
-        }
-
-        private boolean checkRepetition(String s, int first, int last) {
-            int[] chars = new int[];
-
-            for (int i = first; i <= last; i++) {
-                char c = s.charAt(i);
-                chars[c]++;
-                if (chars[c] > 1) {
-                    return false;
-                }
-            }
-
-            return true;
-        }
-
-
-
+                System.out.println("Longest substring : " +maxWord);
+                int len = maxWord.length();
+        System.out.println("Length : "  +len);
 
     }
 }
+
+
