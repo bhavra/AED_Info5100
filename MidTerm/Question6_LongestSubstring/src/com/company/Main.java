@@ -21,8 +21,7 @@ public class Main {
                 }
                 System.out.println("Longest substring : " +maxWord);
                 int len = maxWord.length();
-        System.out.println("Length : "  +len);
-
+                System.out.println("Length : "  +len);
     }
 }
 
