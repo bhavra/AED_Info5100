@@ -21,7 +21,7 @@ public class Main {
         }
         StringBuilder sb = new StringBuilder();
         int i, count = 1;
-
+        String output = "";
         for(i = 0; i< input.length(); i++){
             if( i+1<input.length() && input.charAt(i) == input.charAt(i+1) ){
                 count++;
@@ -34,6 +34,7 @@ public class Main {
                 count=1;
             }
         }
+
         return sb.toString();
     }
 }

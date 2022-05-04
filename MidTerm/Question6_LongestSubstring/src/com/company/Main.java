@@ -7,7 +7,8 @@ public class Main {
 
                 Scanner sc = new Scanner(System.in);
                 System.out.println("Enter String : ");
-                String word = sc.next(), maxWord = "", newWord = "";
+                String word = sc.next();
+                String maxWord = "", newWord = "";
                 int l = word.length(), i, j, max = 0;
                 for (i = 0; i < l; i++) {
                     newWord = word.substring(i);
