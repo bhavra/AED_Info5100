@@ -28,12 +28,7 @@ public class Main {
                 hashset.remove(input.charAt(i));
                 i++;
             }
-            //           if(output.length()< j-i+1){
-            //               output = input.substring(i,j);
-            //           }
         }
-        //       System.out.println("Longest substring : "+output);
         return max;
     }
-
 }
